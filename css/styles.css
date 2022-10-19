@@ -11,6 +11,9 @@
 	--accent-button-color: #188ce8;
 	--header-line-color: #ececec;
 	--portfolio-border-color: #eeeeee;
+	--overlay-hero-color: rgba(47, 48, 58, 0.4);
+	--clients-border-color: #afb1b8;
+	--media-background-color: rgba(255, 255, 255, 0.1);
 }
 
 body {
@@ -166,6 +169,19 @@ header > .container {
 	background-color: var(--accent-background-color);
 }
 
+.overlay {
+	max-width: 1600px;
+	height: 600px;
+	margin-right: auto;
+	margin-left: auto;
+	background-image: linear-gradient(to right, var(--overlay-hero-color), var(--overlay-hero-color)),
+		url(../images/bgd-image.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	color: var(--overlay-hero-color);
+}
+
 .hero-title {
 	margin: 0 auto;
 	margin-bottom: 30px;
@@ -299,11 +315,34 @@ header > .container {
 	text-align: center;
 }
 
+/* ---------------OUR CLIENTS--------------- */
+.clients-list {
+	display: flex;
+	gap: 30px;
+}
+
+.clients-item {
+	width: 170px;
+	height: 92px;
+	padding: 16px 32px;
+	border: 1px solid var(--clients-border-color);
+	border-radius: 4px;
+}
+
 /* ------------------FOOTER----------------- */
 .footer {
 	padding-top: 60px;
 	padding-bottom: 60px;
 	background-color: var(--accent-background-color);
+}
+
+.footer-container {
+	display: flex;
+	align-items: baseline;
+}
+
+.adress-container {
+	margin-right: 70px;
 }
 
 .footer-logo {
@@ -339,6 +378,28 @@ header > .container {
 .footer-contacts:hover,
 .footer-contacts:focus {
 	color: var(--accent-color);
+}
+
+.media-text {
+	margin-bottom: 20px;
+
+	font-weight: 700;
+	line-height: 1.14;
+	text-transform: uppercase;
+
+	color: #ffffff;
+}
+
+.footer-media-list {
+	display: flex;
+	gap: 10px;
+}
+
+.footer-media-item {
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	background-color: var(--media-background-color);
 }
 
 /* -----------------PORTFOLIO--------------- */
