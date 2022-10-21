@@ -145,6 +145,9 @@ header > .container {
 }
 
 .header-contacts {
+	display: flex;
+	align-items: center;
+
 	color: var(--primary-text-color);
 
 	font-weight: 500;
@@ -156,6 +159,16 @@ header > .container {
 .header-contacts:hover,
 .header-contacts:focus {
 	color: var(--accent-color);
+}
+
+.header-icon {
+	margin-right: 10px;
+	fill: currentColor;
+}
+
+.header-icon:hover,
+.header-icon:focus {
+	fill: var(--accent-color);
 }
 
 /* -------------------MAIN------------------ */
@@ -321,7 +334,8 @@ header > .container {
 	gap: 30px;
 }
 
-.clients-item {
+.clients-link {
+	display: block;
 	width: 170px;
 	height: 92px;
 	padding: 16px 32px;
@@ -380,7 +394,7 @@ header > .container {
 	color: var(--accent-color);
 }
 
-.media-text {
+.subscribe-text {
 	margin-bottom: 20px;
 
 	font-weight: 700;
@@ -390,12 +404,13 @@ header > .container {
 	color: #ffffff;
 }
 
-.footer-media-list {
+.social-links-list {
 	display: flex;
 	gap: 10px;
 }
 
-.footer-media-item {
+.footer-social-link {
+	display: block;
 	width: 44px;
 	height: 44px;
 	border-radius: 50%;
