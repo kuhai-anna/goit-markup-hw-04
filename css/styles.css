@@ -375,7 +375,8 @@ header > .container {
 }
 
 .clients-item {
-	width: 170px;
+	width: calc((100%-150px) / 6);
+	/* width: 170px; */
 	height: 92px;
 }
 
