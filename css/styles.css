@@ -10,10 +10,11 @@
 	--accent-background-color: #2f303a;
 	--accent-button-color: #188ce8;
 	--header-line-color: #ececec;
-	--portfolio-border-color: #eeeeee;
+	--icons-color: #afb1b8;
 	--overlay-hero-color: rgba(47, 48, 58, 0.4);
 	--clients-border-color: #afb1b8;
 	--media-background-color: rgba(255, 255, 255, 0.1);
+	--portfolio-border-color: #eeeeee;
 }
 
 body {
@@ -166,23 +167,18 @@ header > .container {
 	fill: currentColor;
 }
 
-.header-icon:hover,
-.header-icon:focus {
-	fill: var(--accent-color);
-}
-
 /* -------------------MAIN------------------ */
 /* -------------------HERO------------------ */
 .hero {
 	padding-top: 200px;
 	padding-bottom: 200px;
 
-	text-align: center;
-
 	background-color: var(--accent-background-color);
+
+	text-align: center;
 }
 
-.overlay {
+.hero-overlay {
 	max-width: 1600px;
 	height: 600px;
 	margin-right: auto;
@@ -192,7 +188,6 @@ header > .container {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	color: var(--overlay-hero-color);
 }
 
 .hero-title {
@@ -263,6 +258,17 @@ header > .container {
 	display: flex;
 }
 
+.icon-wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 270px;
+	height: 120px;
+	margin-bottom: 30px;
+	border-radius: 4px;
+	background-color: var(--secondary-background-color);
+}
+
 .features-title {
 	margin-bottom: 10px;
 
@@ -323,9 +329,43 @@ header > .container {
 }
 
 .card-description {
+	margin-bottom: 16px;
+
 	font-size: 16px;
 	line-height: 1.19;
 	text-align: center;
+}
+
+.social-links {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+}
+
+.social-link-item {
+	width: 44px;
+	height: 44px;
+}
+
+.team-social-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+
+	color: var(--icons-color);
+}
+
+.team-social-link:hover,
+.team-social-link:focus {
+	background-color: var(--accent-color);
+	color: var(--additional-text-color);
+}
+
+.team-icon {
+	fill: currentColor;
 }
 
 /* ---------------OUR CLIENTS--------------- */
@@ -334,13 +374,32 @@ header > .container {
 	gap: 30px;
 }
 
-.clients-link {
-	display: block;
+.clients-item {
 	width: 170px;
 	height: 92px;
-	padding: 16px 32px;
+}
+
+.clients-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
 	border: 1px solid var(--clients-border-color);
 	border-radius: 4px;
+
+	color: var(--icons-color);
+}
+
+.clients-link:hover,
+.clients-link:focus {
+	border-color: var(--accent-color);
+
+	color: var(--accent-color);
+}
+
+.client-icon {
+	fill: currentColor;
 }
 
 /* ------------------FOOTER----------------- */
@@ -401,7 +460,7 @@ header > .container {
 	line-height: 1.14;
 	text-transform: uppercase;
 
-	color: #ffffff;
+	color: var(--additional-text-color);
 }
 
 .social-links-list {
@@ -410,11 +469,29 @@ header > .container {
 }
 
 .footer-social-link {
-	display: block;
 	width: 44px;
 	height: 44px;
+}
+
+.footer-social-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
 	border-radius: 50%;
 	background-color: var(--media-background-color);
+
+	color: var(--additional-text-color);
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+	background-color: var(--accent-color);
+}
+
+.footer-icon {
+	fill: currentColor;
 }
 
 /* -----------------PORTFOLIO--------------- */
@@ -431,6 +508,7 @@ header > .container {
 
 .filter-btn {
 	padding: 6px 22px;
+	background-color: var(--secondary-background-color);
 
 	color: var(--title-text-color);
 
@@ -440,15 +518,15 @@ header > .container {
 	line-height: 1.63;
 	text-align: center;
 	letter-spacing: 0.03em;
-
-	background-color: var(--secondary-background-color);
 }
 
 .filter-btn:hover,
 .filter-btn:focus {
-	color: var(--additional-text-color);
-
+	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+		0px 2px 2px rgba(0, 0, 0, 0.12);
 	background-color: var(--accent-color);
+
+	color: var(--additional-text-color);
 }
 
 .projects-list {
@@ -472,9 +550,20 @@ header > .container {
 	margin-bottom: 0;
 }
 
+.project-link {
+	display: block;
+}
+
+.project-link:hover,
+.project-link:focus {
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+		1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .about-project {
 	padding: 20px 24px;
-	border-bottom: 1px solid var(--portfolio-border-color);
+	border: 1px solid var(--portfolio-border-color);
+	border-top: none;
 }
 
 .project-title {
