@@ -183,7 +183,7 @@ header > .container {
 	height: 600px;
 	margin-right: auto;
 	margin-left: auto;
-	background-image: linear-gradient(to right, var(--overlay-hero-color), var(--overlay-hero-color)),
+	background-image: linear-gradient(var(--overlay-hero-color), var(--overlay-hero-color)),
 		url(../images/bgd-image.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
