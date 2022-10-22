@@ -355,17 +355,13 @@ header > .container {
 	height: 100%;
 	border-radius: 50%;
 
-	color: var(--icons-color);
+	fill: var(--icons-color);
 }
 
 .team-social-link:hover,
 .team-social-link:focus {
 	background-color: var(--accent-color);
-	color: var(--additional-text-color);
-}
-
-.team-icon {
-	fill: currentColor;
+	fill: var(--additional-text-color);
 }
 
 /* ---------------OUR CLIENTS--------------- */
@@ -376,7 +372,6 @@ header > .container {
 
 .clients-item {
 	width: calc((100%-150px) / 6);
-	/* width: 170px; */
 	height: 92px;
 }
 
@@ -389,18 +384,14 @@ header > .container {
 	border: 1px solid var(--clients-border-color);
 	border-radius: 4px;
 
-	color: var(--icons-color);
+	fill: var(--icons-color);
 }
 
 .clients-link:hover,
 .clients-link:focus {
 	border-color: var(--accent-color);
 
-	color: var(--accent-color);
-}
-
-.client-icon {
-	fill: currentColor;
+	fill: var(--accent-color);
 }
 
 /* ------------------FOOTER----------------- */
@@ -478,16 +469,12 @@ header > .container {
 	border-radius: 50%;
 	background-color: var(--media-background-color);
 
-	color: var(--additional-text-color);
+	fill: var(--additional-text-color);
 }
 
 .footer-social-link:hover,
 .footer-social-link:focus {
 	background-color: var(--accent-color);
-}
-
-.footer-icon {
-	fill: currentColor;
 }
 
 /* -----------------PORTFOLIO--------------- */
